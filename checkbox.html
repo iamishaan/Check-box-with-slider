@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.switch {
+    position: relative; width: 130px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.switch-checkbox {
+    display: none;
+}
+.switch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid black;
+}
+.switch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    
+}
+.switch-inner:before, .switch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.switch-inner:before {
+    content: "That";
+    padding-left: 10px;
+    background-color: #FF4500; color: #FFFFFF;
+
+}
+.switch-inner:after {
+    content: "This";
+    padding-right: 10px;
+    background-color: #228B22; color:  #FFFFFF;
+    text-align: right;
+}
+.switch-switch {
+    display: block; width: 6px; margin: 6px;
+    background: black;
+    position: absolute; top: 0; bottom: 0;
+    
+    border: 2px solid #999999; 
+    transition: all 0.3s ease-in 0s; 
+}
+.switch-checkbox:checked + .switch-label .switch-inner {
+  -webkit-transform: translateX(125px);
+  -ms-transform: translateX(125px);
+  transform: translateX(125px);
+}
+.switch-checkbox:checked + .switch-label .switch-switch {
+    -webkit-transform: translateX(103px);
+  -ms-transform: translateX(103px);
+  transform: translateX(103px);
+}
+</style>
+</head>
+<body>
+<div class="switch">
+    <input type="checkbox" name="switch" class="switch-checkbox" id="myswitch" checked>
+    <label class="switch-label" for="myswitch">
+        <span class="switch-inner"></span>
+        <span class="switch-switch"></span>
+    </label>
+</div>
+</body>
+</html>
